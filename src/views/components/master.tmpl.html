@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
         <!--@@var= title-->
     </title>
@@ -10,96 +12,99 @@
 
 </head>
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-3">
-            <div class="Sidebar">
-                <div class="logo">
-                    <a href="" class="logo-link">
-                        <img src="https://placehold.it/100x100" alt="The logo" class="logo-img">
-                    </a>
 
-                    <div class="logo-desc">KAPPE</div>
-                </div>
+<div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="header">
 
-                <div class="menu text-right">
-                    <ul class="menu-list">
-                        <li class="menu-item">
-                            <a class="menu-link" href="#">HOME</a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="menu-link" href="#">WORK</a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="menu-link" href="#">ABOUT</a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="menu-link" href="#">BLOG</a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="menu-link" href="#">SERVICES</a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="menu-link" href="#">CONTACT</a>
-                        </li>
-                    </ul>
-                </div>
+            <img src="https://placehold.it/100x100" alt="">
 
-                <div class="filter text-right">
+                <p>
+                    Lorem ipsum dolor sit amet.
+                </p>
 
-                    <div class="filter-desc">
-                        FILTER
-                        <img src="https://placehold.it/20x20" alt="the filter img" class="filter-img">
-                    </div>
-                    <ul class="filter-list">
-                        <li class="filter-item">
-                            <a href="#" class="filter-link">All Works</a>
-                        </li>
-                        <li class="filter-item">
-                            <a href="#" class="filter-link">web design</a>
-                        </li>
-                        <li class="filter-item">
-                            <a href="#" class="filter-link">illustration</a>
-                        </li>
-                        <li class="filter-item">
-                            <a href="#" class="filter-link">photography</a>
-                        </li>
-                        <li class="filter-item">
-                            <a href="#" class="filter-link">wallpapers</a>
-                        </li>
-                        <li class="filter-item">
-                            <a href="#" class="filter-link">brochures</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="social">
-                    <ul class="social-list">
-                        <li class="social-item"><img src="https://placehold.it/50x50" alt="the img" class="social-img"></li>
-                        <li class="social-item"><img src="https://placehold.it/50x50" alt="the img" class="social-img"></li>
-                        <li class="social-item"><img src="https://placehold.it/50x50" alt="the img" class="social-img"></li>
-                        <li class="social-item"><img src="https://placehold.it/50x50" alt="the img" class="social-img"></li>
-                        <li class="social-item"><img src="https://placehold.it/50x50" alt="the img" class="social-img"></li>
-                        <li class="social-item"><img src="https://placehold.it/50x50" alt="the img" class="social-img"></li>
-                        <li class="social-item"><img src="https://placehold.it/50x50" alt="the img" class="social-img"></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer">
-                © 2014 Kappe, All Rights Reserved
-            </div>
         </div>
 
-        <div class="col-xs-9">
-            <div class="content">
-                <!-- @@placeholder= content -->
-            </div>
-        </div>
+        <ul class="list-unstyled text-right menu">
+            <li class="menu-item">
+                <a class="menu-link" href="#">Home</a>
+            </li>
+
+            <li class="active menu-item">
+                <a class="menu-link" href="#">
+                    About
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a class="menu-link" href="#">
+                    Pages
+                </a>
+
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="#">Portfolio</a>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="#">Contact</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+
+        <button type="button" id="sidebarCollapse" class="navbar-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <h2>My site</h2>
+
+        <!-- @@placeholder= content -->
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+
+        <div class="line"></div>
+
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+
+        <div class="line"></div>
+
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+
+        <div class="line"></div>
+
+        <h3>Lorem Ipsum Dolor</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
     </div>
-
 </div>
 
 
+<!-- jQuery CDN -->
+<script src="js/vendor.min.js"></script>
+<script src="js/app.min.js"></script>
 </body>
 </html>
