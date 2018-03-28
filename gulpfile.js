@@ -17,7 +17,6 @@ gulp.task("js", function () {
     return gulp.src("src/scripts/**/*.js")
         .pipe(plugins.concat("app.min.js"))
         .pipe(gulp.dest("dist/js"))
-        .pipe(sync.stream())
 
 });
 
