@@ -2,48 +2,97 @@
     SIDEBAR STYLE
 ----------------------------------------------------- */
 .wrapper {
-  display: flex;
-  align-items: stretch;
-  perspective: 1500px;
+  position: relative;
+
+}
+
+.sidebar-container {
+  max-width: 1349px;
+  margin: 0 auto;
+
 }
 
 #sidebar {
-  min-width: 250px;
-  max-width: 250px;
+  position: absolute;
+  top: 0;
+  min-width: 300px;
+  max-width: 300px;
   background: #242b2e;
   color: #fff;
-  transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
-  transform-origin:bottom right;
+  box-shadow: 0 0 20px #000, 0 0 15px #fafafa;
+  transition: all 0.5s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+  transform-origin: bottom right;
+  font-weight: lighter;
+  z-index: 1;
 }
 
 #sidebar.active {
-  margin-left: -250px;
+  margin-left: -300px;
   transform: rotateY(90deg);
 }
 
-.header {
-  padding: 20px;
+.logo {
   background: #ffffff;
-}
+  height: 125px;
+  font-family: 'Nanum Gothic', sans-serif;
 
-.menu{
-
-  &-item{
-    background: linear-gradient(to bottom, #333b3f, #2e363a );
-        border-top: 1px solid;
-        border-color: #293034;
-        font-size: 18px;
+  &-img {
+    height: 100%;
+    width: auto;
   }
-  &-link{
-    padding: 24px 24px 24px 0;
-    display: block;
 
-    &:hover{
-      color: #ffffff;
-      background: linear-gradient(to bottom, #356aa0 0%,#356aa0 100%);
+  &-desc {
+    display: inline-block;
+    margin: 0;
+    color: #364048;
+    font-weight: lighter;
+    font-size: 48px;
+    position: relative;
+
+    &:before {
+      content: "for ";
+      font-size: 14px;
+      position: absolute;
+      top: 45%;
+      left: 30%;
+      transform: rotate(270deg);
+      color: #c4c4c4;
+    }
+
+    &:after {
+      content: "creatives";
+      font-size: 14px;
+      position: absolute;
+      top: 48%;
+      left: 45%;
+      color: #c4c4c4;
 
     }
   }
+}
+
+.menu {
+
+  &-item {
+    background: linear-gradient(to bottom, #333b3f, #2e363a);
+    border-top: 1px solid;
+    border-color: #293034;
+    font-size: 18px;
+    text-transform: uppercase;
+
+  }
+  &-link {
+    padding: 24px 24px 24px 0;
+    display: block;
+
+    &:hover {
+      background: #356aa0;
+      transition: background 0.5s ease-out;
+
+    }
+
+  }
+
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
@@ -51,23 +100,175 @@
   background: linear-gradient(to bottom, #31bdbb, #169291);
 }
 
+.filter {
+  &-header {
+    padding: 22px 24px 22px 0;
+    font-size: 19px;
+    color: #1ab5b3;
+  }
 
+  &-square {
+    float: right;
+    padding: 0 0 0 12px;
+  }
+
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    padding: 0 24px 16px 0;
+    color: #585d5f;
+
+    &:hover {
+      color: #1ab5b3;
+      transition: color 0.5s;
+    }
+  }
+
+  &-active {
+    color: #ffffff;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+}
+
+.social {
+  border-top: #1e282b 1px solid;
+  margin: 15px 0 0 0;
+  padding: 28px 24px 24px 0;
+
+  &-link {
+    padding-left: 5px;;
+
+  }
+
+  &-img {
+    max-height: 25px;
+    max-width: 25px;
+
+    &:hover {
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+  }
+}
 
 /* ---------------------------------------------------
-    CONTENT STYLE
+    BUTTON HOVER STYLE
 ----------------------------------------------------- */
 #content {
-  padding: 20px;
-  min-height: 100vh;
-  transition: all 0.3s;
+  padding: 0 0 0 300px;
+  transition: all 0.5s;
   position: relative;
 }
+
+
+.content{
+  &-fixed{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: none;
+  }
+
+  &-information{
+    width: 90px;
+    height: 90px;
+    top: 15px;
+    right: 15px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &-circle{
+    position: fixed;
+    transform: translate(25%, 25%);
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+
+  }
+
+  &-desc{
+    position: absolute;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:after{
+      position: absolute;
+      color: #28b4b2;
+      font-family: serif;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: "i";
+      font-weight: bold;
+      font-size: 24px;
+    }
+  }
+
+  &-background{
+    width: 90px;
+    height: 90px;
+    background: rgba(40, 180, 178, 0.5);
+    position: fixed;
+  }
+
+  &-container-info{
+    position: absolute;
+    height: 120px;
+    width: 280px;
+    background: rgba(0,0,0,.8);
+    top: 100%;
+    right: 0;
+  }
+
+  &-container-text{
+    padding: 10px 0 0 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #fff;
+
+    &:first-child:before{
+      padding: 0 10px 0 25px;
+      content: "\260E";
+    }
+
+    &:nth-child(2):before{
+      padding: 0 10px 0 25px;
+      content: "\2709";
+    }
+
+    &:last-child:before{
+      padding: 0 10px 0 25px;
+      content: "\2602";
+    }
+  }
+}
+
+
+
 
 #sidebarCollapse {
   width: 40px;
   height: 40px;
   background: #f5f5f5;
-  display: none;
+  opacity: 0.7;
+  margin: 0;
 
   span {
     width: 80%;
@@ -98,17 +299,21 @@
   }
 }
 
-
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
 @media (max-width: 768px) {
-  #sidebarCollapse{
+
+  #content {
+    padding: 0 0 0 0;
+  }
+
+  .content-fixed {
     display: block;
   }
 
   #sidebar {
-    margin-left: -250px;
+    margin-left: -305px;
     transform: rotateY(90deg);
 
     &.active {
@@ -117,20 +322,20 @@
     }
   }
 
-  #sidebarCollapse{
-    span{
-      &:first-of-type, &:nth-of-type(2), &:last-of-type{
+  #sidebarCollapse {
+    span {
+      &:first-of-type, &:nth-of-type(2), &:last-of-type {
         transform: none;
         opacity: 1;
         margin: 5px auto;
       }
     }
 
-    &.active{
-      span{
+    &.active {
+      span {
         margin: 0 auto;
 
-        &:first-of-type{
+        &:first-of-type {
           transform: rotate(45deg) translate(2px, 2px);
         }
 
