@@ -6,7 +6,7 @@ $(document).ready(function () {
         $(".portfolio").toggleClass("col-xs-6 col-xs-12")
     });
 
-//-----------------------filtered works----------------------------------------------.
+//-----------------------filtered works----------------------------------------------
 
 //     $(".filter-button").click(function(){
 //         var value = $(this).attr('data-filter');
@@ -51,5 +51,11 @@ $(document).ready(function () {
     //     console.log($WW_width)
     //
     // })
+
+
+    //-----------------------Script maps----------------------------------------------
+
+
+
 
 });

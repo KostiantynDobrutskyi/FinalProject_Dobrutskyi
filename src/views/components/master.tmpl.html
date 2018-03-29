@@ -30,7 +30,7 @@
 
             <ul class="list-unstyled text-right menu">
                 <li class="menu-item">
-                    <a class="menu-link" href="#">Home</a>
+                    <a class="menu-link" href="index.html">Home</a>
                 </li>
 
 
@@ -56,7 +56,7 @@
                     <a class="menu-link" href="#">Services</a>
                 </li>
                 <li class="menu-item">
-                    <a class="menu-link" href="#">Contact</a>
+                    <a class="menu-link" href="contact.html">Contact</a>
                 </li>
             </ul>
 
@@ -106,6 +106,8 @@
                 <a href="#" class="social-link">
                     <img src="images/social/7.svg" alt="" class="social-img">
                 </a>
+
+                <div></div>
             </div>
 
         </nav>
@@ -157,5 +159,19 @@
 <!-- jQuery CDN -->
 <script src="js/vendor.min.js"></script>
 <script src="js/app.min.js"></script>
+<script>
+    function initMap() {
+        var location = {lat: 49.551637, lng: 25.616915};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 18,
+            center: location
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzlekiZKxYANGJvZo2QJ8Y3U6eXvc-B80&callback=initMap"></script>
 </body>
 </html>
