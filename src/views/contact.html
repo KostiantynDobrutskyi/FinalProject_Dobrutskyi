@@ -1,5 +1,6 @@
 <!-- @@master= components/master.tmpl.html {"title": "Contact"}-->
 
+
 <!-- @@block= content -->
 <div class="container-fluid padding-none">
     <div id="map">
@@ -7,34 +8,65 @@
     </div>
 
     <div class="contact-form">
+
         <div class="row">
             <div class="col-xs-12">
                 <h3 class="contact-form-head">Get in touch with us</h3>
-                <p class="contact-form-desc page-header">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                <p class="contact-form-desc page-header">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+                    consequat ipsum, nec sagittis sem
                     nibh id elit, Duis sed odio sit amet nibh vulputate cursus a sit amet mauris Morbi
                     ccumsan ipsum velit Nam nec tellus a odio tincidunt auctor a ornare odio</p>
                 <h3 class="contact-form-head">Send us a message</h3>
             </div>
-            <form action="#">
-                <div class="col-xs-6">
+            <form action="#" class="">
+                <div class="col-xs-6 contact-form-padding">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name">
+                        <input type="text" class="form-control  contact-form-input" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control  contact-form-input" placeholder="e-mail">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control  contact-form-input" placeholder="website">
                     </div>
 
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name">
-                    </div>
                 </div>
-                <div class="col-xs-6"></div>
+                <div class="col-xs-6 contact-form-padding-last">
+                    <div class="form-group">
+                        <textarea cols="10" rows="3" placeholder="Message"
+                                  class="form-control contact-form-textarea"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="contact-form-submit">
+                                Send Now
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
             </form>
         </div>
-
 
     </div>
 </div>
 <!-- @@close -->
 
+
+<!-- @@block= scripts -->
+<script>
+    function initMap() {
+        var location = {lat: 49.551637, lng: 25.616915};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: location
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            animation: google.maps.Animation.BOUNCE
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzlekiZKxYANGJvZo2QJ8Y3U6eXvc-B80&callback=initMap"></script>
+<!-- @@close -->
