@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
         $(this).toggleClass('active');
-        $(".portfolio").toggleClass("col-xs-6 col-xs-12")
+        // $(".portfolio").toggleClass("col-xs-6 col-xs-12")
     });
 
 //-----------------------filtered works----------------------------------------------
