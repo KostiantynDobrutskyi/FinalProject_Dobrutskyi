@@ -37,7 +37,10 @@ gulp.task("styles:app", function () {
 
 gulp.task("styles:vendor", function () {
     return gulp.src([
-        "node_modules/bootstrap/dist/css/bootstrap.min.css"
+        "node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "node_modules/slick-carousel/slick/slick.css",
+        "node_modules/slick-carousel/slick/slick-theme.css",
+        "node_modules/simplelightbox/dist/simplelightbox.min.css"
     ])
         .pipe(plugins.concat("vendor.min.css"))
         .pipe(gulp.dest("dist/css"))
@@ -45,13 +48,35 @@ gulp.task("styles:vendor", function () {
 
 });
 
+gulp.task("loader:vendor", function () {
+    return gulp.src([
+        "node_modules/slick-carousel/slick/ajax-loader.gif"
+    ])
+        .pipe(gulp.dest("dist/css"))
+
+
+});
+
+
+
 gulp.task("scripts:vendor", function () {
    return gulp.src([
        "node_modules/jquery/dist/jquery.min.js",
-       "node_modules/bootstrap/dist/js/bootstrap.min.js"
+       "node_modules/bootstrap/dist/js/bootstrap.min.js",
+       "node_modules/slick-carousel/slick/slick.min.js",
+       "node_modules/simplelightbox/dist/simple-lightbox.min.js"
    ])
        .pipe(plugins.concat("vendor.min.js"))
        .pipe(gulp.dest("dist/js"))
+});
+
+gulp.task("plugins", function () {
+   return gulp.src([
+       "node_modules/jcarousel/dist/jquery.jcarousel.min.js"
+
+   ])
+       .pipe(plugins.concat("plugins.min.js"))
+       .pipe(gulp.dest("dist/js/plugins"))
 });
 
 gulp.task("fonts:vendor", function () {
@@ -63,13 +88,23 @@ gulp.task("fonts:vendor", function () {
 
 });
 
+gulp.task("fonts:plugins", function () {
+    return gulp.src([
+        "node_modules/slick-carousel/slick/fonts/*"
+    ])
+        .pipe(gulp.dest("dist/css/fonts"))
+
+
+});
+
+
 gulp.task("clean", function (cb) {
     del.sync("dist");
     cb();
 });
 
 gulp.task("build", ["clean"], function () {
-    gulp.start(["html", "styles:app","styles:vendor","fonts:vendor","scripts:vendor","js","images"]);
+    gulp.start(["html", "styles:app","styles:vendor","fonts:vendor","scripts:vendor","js","images","plugins", "fonts:plugins","loader:vendor"]);
 });
 
 gulp.task("watch", ["build"], function () {
