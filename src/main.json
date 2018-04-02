@@ -1,0 +1,102 @@
+[
+  {
+    "portfolio": "images/portfolio/illustrations1.jpg",
+    "filter": "illustrations"
+
+  },
+
+  {
+    "portfolio": "images/portfolio/photography1.jpg",
+    "filter": "photography"
+  },
+
+  {
+    "portfolio": "images/portfolio/wallpers1.jpg",
+    "filter": "wallpers"
+  },
+
+  {
+    "portfolio": "images/portfolio/web-design1.jpg",
+    "filter": "design"
+  },
+
+  {
+    "portfolio": "images/portfolio/illustrations2.jpg",
+    "filter": "illustrations"
+  },
+
+  {
+    "portfolio": "images/portfolio/photography2.jpg",
+    "filter": "photography"
+  },
+
+  {
+    "portfolio": "images/portfolio/wallpers2.jpeg",
+    "filter": "wallpers"
+  },
+
+  {
+    "portfolio": "images/portfolio/web-design2.jpg",
+    "filter": "design"
+  },
+
+  {
+    "portfolio": "images/portfolio/illustrations3.jpg",
+    "filter": "illustrations"
+  },
+
+  {
+    "portfolio": "images/portfolio/photography3.jpg",
+    "filter": "photography"
+  },
+
+  {
+    "portfolio": "images/portfolio/wallpers3.jpg",
+    "filter": "wallpers"
+  },
+
+  {
+    "portfolio": "images/portfolio/web-design3.jpg",
+    "filter": "design"
+  },
+
+  {
+    "portfolio": "images/portfolio/illustrations4.jpg",
+    "filter": "illustrations"
+  },
+
+  {
+    "portfolio": "images/portfolio/photography4.jpg",
+    "filter": "photography"
+  },
+
+  {
+    "portfolio": "images/portfolio/wallpers4.jpg",
+    "filter": "wallpers"
+  },
+
+  {
+    "portfolio": "images/portfolio/web-design4.png",
+    "filter": "design"
+  },
+
+  {
+    "portfolio": "images/portfolio/illustrations5.jpg",
+    "filter": "illustrations"
+  },
+
+  {
+    "portfolio": "images/portfolio/photography2.jpg",
+    "filter": "photography"
+  },
+
+  {
+    "portfolio": "images/portfolio/illustrations2.jpg",
+    "filter": "illustrations"
+  },
+
+  {
+    "portfolio": "images/portfolio/web-design5.jpg",
+    "filter": "design"
+  }
+]

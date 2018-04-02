@@ -1,24 +1,30 @@
 <!-- @@master= components/master.tmpl.html {"title": "Home page"}-->
 
+
+<!-- @@block= contentInformation -->
+<div class="content-information">
+    <div class="content-background">
+        <div class="content-circle">
+            <div class="content-desc">
+
+            </div>
+        </div>
+        <div class="content-container-info" style="display: none">
+            <p class="content-container-text">9930 1234 5679</p>
+            <p class="content-container-text">contact@domain.com</p>
+            <p class="content-container-text">street address example</p>
+
+        </div>
+    </div>
+</div>
+<!-- @@close -->
+
 <!-- @@block= content -->
-<div class="container-fluid no-gutter padding-none">
-    <!--<div class="row">-->
-    <!--<div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
-    <!--<h1 class="gallery-title">Gallery</h1>-->
-    <!--<div class="text-center">-->
-    <!--<button class="btn btn-default filter-button" data-filter="all">All</button>-->
-    <!--<button class="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>-->
-    <!--<button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>-->
-    <!--<button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>-->
-    <!--<button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
+<div class="container-fluid no-gutter padding-none" data-bind="foreach: dataJson">
+     <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6" data-bind="class: $data.filter">
         <div class="portfolio-container">
             <a href="#" class="portfolio-link">
-                <img src="images/portfolio/illustrations1.jpg" class="portfolio-img">
+                <img data-bind="attr: {src: $data.portfolio}" class="portfolio-img">
             </a>
         </div>
         <div class="portfolio-middle">
@@ -28,311 +34,9 @@
             <div class="portfolio-circle">
             </div>
         </div>
-    </div>
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/photography1.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/wallpers1.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
 
 
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/web-design1.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/illustrations2.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/photography2.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/wallpers2.jpeg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/web-design2.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/illustrations3.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/photography3.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/wallpers3.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/web-design3.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/illustrations4.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/photography4.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/wallpers4.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/web-design4.png" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/illustrations5.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/photography2.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/illustrations2.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="portfolio col-lg-3 col-md-4 col-sm-6 col-xs-6 filter spray">
-        <div class="portfolio-container">
-            <a href="#" class="portfolio-link">
-                <img src="images/portfolio/web-design5.jpg" class="portfolio-img">
-            </a>
-        </div>
-        <div class="portfolio-middle">
-            <div class="portfolio-text">
-                Cool App Design
-            </div>
-            <div class="portfolio-circle">
-            </div>
-        </div>
-    </div>
+</div>
 
 </div>
 
