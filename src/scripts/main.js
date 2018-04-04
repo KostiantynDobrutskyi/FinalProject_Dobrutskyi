@@ -51,7 +51,7 @@ $(document).ready(function () {
                 $(".design").show(1000);
             }, 1000);
 
-            vm.toastr("Web design")
+            vm.toastr("Web design", "Filtered")
 
         },
 
@@ -61,7 +61,7 @@ $(document).ready(function () {
                 $(".illustrations").show(1000);
             }, 1000);
 
-            vm.toastr("Illustrations")
+            vm.toastr("Illustrations", "Filtered")
 
         },
 
@@ -71,7 +71,7 @@ $(document).ready(function () {
                 $(".photography").show(1000);
             }, 1000);
 
-            vm.toastr("Photography")
+            vm.toastr("Photography", "Filtered")
         },
 
         filteredWallpers: function () {
@@ -80,7 +80,7 @@ $(document).ready(function () {
                 $(".wallpers").show(1000);
             }, 1000);
 
-            vm.toastr("Wallpers")
+            vm.toastr("Wallpers", "Filtered")
 
         },
 
@@ -101,27 +101,27 @@ $(document).ready(function () {
             }, 1000)
         },
 
-        toastr: function (message) {
-        toastr["success"](message,"Filtered");
+        toastr: function (message1, message2) {
+            toastr["success"](message1,message2 );
 
-        toastr.options = {
-            "closeButton": false,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": false,
-            "positionClass": "toast-top-right",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-        };
-    }
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            };
+        }
 
 
     };
@@ -129,58 +129,10 @@ $(document).ready(function () {
     ko.applyBindings(vm);
 
 //---------------------------------------info--------------------------
-    $(".content-desc").click(function(){
-            $(".content-container-info").show(1000);
+    $(".content-desc").click(function () {
+        $(".content-container-info").show(1000);
 
     });
-
-
-
-
-//-----------------------filtered works----------------------------------------------
-
-//     $(".filter-button").click(function(){
-//         var value = $(this).attr('data-filter');
-//
-//         if(value == "all")
-//         {
-//             // $('.filter').removeClass('hidden');
-//             $('.filter').show('1000');
-//         }
-//         else
-//         {
-// //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-// //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-//             $(".filter").not('.'+value).hide('3000');
-//             $('.filter').filter('.'+value).show('3000');
-//
-//         }
-//     });
-//
-//     if ($(".filter-button").removeClass("active")) {
-//         $(this).removeClass("active");
-//     }
-//     $(this).addClass("active");
-
-
-    // $(window).resize(function(){
-    //     var $WW_width = document.documentElement.clientWidth; //Ширина экрана
-    //     var $WW_height = document.documentElement.clientHeight; //Высота экрана
-    //
-    //     if($WW_width>1499){
-    //         $(".portfolio").removeClass("col-lg-3");
-    //         $(".portfolio").addClass("col-lg-2");
-    //         console.log("change")
-    //     }
-    //     if($WW_width<=1499){
-    //         $(".portfolio").removeClass("col-lg-2");
-    //         $(".portfolio").addClass("col-lg-3");
-    //
-    //     }
-    //
-    //     console.log($WW_width)
-    //
-    // })
 
 
 //-----------------------Carousel slick----------------------------------------------
@@ -191,7 +143,6 @@ $(document).ready(function () {
         arrows: false,
         dots: true
     });
-
 
     //------------------------------------gallery-----------------------------------
 
@@ -239,5 +190,34 @@ $(document).ready(function () {
             console.log(e);
         });
 
+//-----------------------------------Form Validator----------------------------
+
+    $("#form-contact").validate({
+        rules: {
+            name: "required",
+            email: {
+                required: true,
+                email: true
+            },
+            site: {
+                required: true,
+                url: true
+            }
+        },
+        messages: {
+            name: {
+                required: "Please enter your Name",
+                minlength: "Minimum two characters"
+            }
+        },
+
+        submitHandler: function() {
+            vm.toastr("Successfully submitted! The form is valid.");
+        }
+
+
+
+
+    });
 
 });

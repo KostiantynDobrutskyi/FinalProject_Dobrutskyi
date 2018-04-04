@@ -65,27 +65,30 @@ gulp.task("loader:vendor", function () {
 });
 
 
-
 gulp.task("scripts:vendor", function () {
-   return gulp.src([
-       "node_modules/jquery/dist/jquery.min.js",
-       "node_modules/knockout/build/output/knockout-latest.js",
-       "node_modules/bootstrap/dist/js/bootstrap.min.js"
-   ])
-       .pipe(plugins.concat("vendor.min.js"))
-       .pipe(gulp.dest("dist/js"))
+    return gulp.src([
+        "node_modules/jquery/dist/jquery.min.js",
+        "node_modules/knockout/build/output/knockout-latest.js",
+        "node_modules/bootstrap/dist/js/bootstrap.min.js"
+    ])
+        .pipe(plugins.concat("vendor.min.js"))
+        .pipe(gulp.dest("dist/js"))
 });
 
 gulp.task("plugins", function () {
-   return gulp.src([
-       "node_modules/slick-carousel/slick/slick.min.js",
-       "node_modules/simplelightbox/dist/simple-lightbox.min.js",
-       "node_modules/toastr/build/toastr.min.js"
+    return gulp.src([
+        "node_modules/slick-carousel/slick/slick.min.js",
+        "node_modules/simplelightbox/dist/simple-lightbox.min.js",
+        "node_modules/toastr/build/toastr.min.js",
+        "node_modules/jquery-validation/dist/jquery.validate.min.js"
 
-   ])
-       .pipe(plugins.concat("plugins.min.js"))
-       .pipe(gulp.dest("dist/js/plugins"))
+
+    ])
+        .pipe(plugins.concat("plugins.min.js"))
+        .pipe(gulp.dest("dist/js/plugins"))
 });
+
+
 
 gulp.task("fonts:vendor", function () {
     return gulp.src([
@@ -112,7 +115,7 @@ gulp.task("clean", function (cb) {
 });
 
 gulp.task("build", ["clean"], function () {
-    gulp.start(["html", "styles:app","styles:vendor","fonts:vendor","scripts:vendor","js","images","plugins", "fonts:plugins","loader:vendor","json"]);
+    gulp.start(["html", "styles:app", "styles:vendor", "fonts:vendor", "scripts:vendor", "js", "images", "plugins", "fonts:plugins", "loader:vendor", "json"]);
 });
 
 gulp.task("watch", ["build"], function () {
@@ -123,7 +126,7 @@ gulp.task("watch", ["build"], function () {
 
     gulp.watch("src/scripts/*.js", ["js"]);
 
-    // gulp.watch("src/views/**/*.html", ["html"]);
+    gulp.watch("src/views/**/*.html", ["html"]);
     // gulp.watch("dist/*.html").on("change", sync.reload());
 
 });
